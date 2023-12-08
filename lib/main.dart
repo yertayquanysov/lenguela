@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lenguela/features/dashboard/presentation/pages/dashboard_page.dart';
+import 'package:lenguela/features/content/presentation/pages/add_content_page.dart';
 
 void main() => runApp(const App());
 
@@ -14,11 +14,9 @@ class App extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         textTheme: GoogleFonts.ubuntuTextTheme(),
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.redAccent,
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
       ),
-      home: const DashboardPage(),
+      home: const AddContentPage(),
     );
   }
 }
