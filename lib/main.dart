@@ -11,7 +11,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const AccountPage(),
+      home: AccountPage(),
       theme: ThemeData(
         useMaterial3: true,
         textTheme: GoogleFonts.ubuntuTextTheme(),

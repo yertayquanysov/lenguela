@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'menu_item.dart';
 
 class MenuList extends StatelessWidget {
-  const MenuList({super.key});
+  const MenuList({super.key, required this.onMenuTapped});
+
+  final Function(int page) onMenuTapped;
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +25,23 @@ class MenuList extends StatelessWidget {
                   content: SizedBox(
                     width: double.minPositive,
                     child: ListView(
+                      shrinkWrap: true,
                       children: const [
-                        ListTile(title: Text("Spanish")),
-                        ListTile(title: Text("Arabic")),
-                        ListTile(title: Text("Korean")),
-                        ListTile(title: Text("English")),
-                        ListTile(title: Text("Turkey")),
+                        ListTile(
+                          title: Text("Spanish"),
+                        ),
+                        ListTile(
+                          title: Text("Arabic"),
+                        ),
+                        ListTile(
+                          title: Text("Korean"),
+                        ),
+                        ListTile(
+                          title: Text("English"),
+                        ),
+                        ListTile(
+                          title: Text("Turkey"),
+                        ),
                       ],
                     ),
                   ),
@@ -40,13 +53,31 @@ class MenuList extends StatelessWidget {
         const SizedBox(height: 10),
         Expanded(
           child: ListView(
-            children: const [
-              MenuItem(name: "Reader"),
-              MenuItem(name: "Vocabulary"),
-              MenuItem(name: "Listening tracker"),
-              MenuItem(name: "Reading tracker"),
-              MenuItem(name: "You progress"),
-              MenuItem(name: "Premium"),
+            children: [
+              MenuItem(
+                name: "Reader",
+                onTapped: () => onMenuTapped(0),
+              ),
+              MenuItem(
+                name: "Vocabulary",
+                onTapped: () => onMenuTapped(1),
+              ),
+              MenuItem(
+                name: "Listening tracker",
+                onTapped: () {},
+              ),
+              MenuItem(
+                name: "Reading tracker",
+                onTapped: () {},
+              ),
+              MenuItem(
+                name: "You progress",
+                onTapped: () {},
+              ),
+              MenuItem(
+                name: "Premium",
+                onTapped: () {},
+              ),
             ],
           ),
         ),
