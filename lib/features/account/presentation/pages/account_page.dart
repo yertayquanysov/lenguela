@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lenguela/features/account/presentation/widgets/menu_list.dart';
+import 'package:lenguela/features/vocabulary/presentation/pages/vocabulary_list_page.dart';
 
 class AccountPage extends StatelessWidget {
   const AccountPage({super.key});
@@ -14,7 +15,10 @@ class AccountPage extends StatelessWidget {
             height: double.infinity,
             color: Colors.blueAccent.withOpacity(0.02),
             child: const MenuList(),
-          )
+          ),
+          const Expanded(
+            child: VocabularyListPage(),
+          ),
         ],
       ),
     );
