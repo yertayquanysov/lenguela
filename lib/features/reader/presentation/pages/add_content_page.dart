@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lenguela/features/reader/presentation/pages/view_content_page.dart';
 
@@ -7,7 +6,6 @@ class AddContentPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     String passedText = "";
 
     return Scaffold(
