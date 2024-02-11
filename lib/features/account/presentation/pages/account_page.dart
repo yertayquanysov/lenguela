@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lenguela/features/account/presentation/widgets/menu_list.dart';
+import 'package:lenguela/features/content/presentation/pages/add_content_page.dart';
+import 'package:lenguela/features/flashcard/presentation/pages/flashcard_page.dart';
+import 'package:lenguela/features/tracker/presentation/pages/tracker_page.dart';
 import 'package:lenguela/features/vocabulary/presentation/pages/vocabulary_list_page.dart';
-
-import '../../../content/presentation/pages/content_list_page.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key});
@@ -13,8 +14,10 @@ class AccountPage extends StatefulWidget {
 
 class _AccountPageState extends State<AccountPage> {
   final _pages = [
-    const ContentListPage(),
+    const AddContentPage(),
     const VocabularyListPage(),
+    const FlashcardPage(),
+    const TrackerPage(),
   ];
 
   int _currentPage = 0;

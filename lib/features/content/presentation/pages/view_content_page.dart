@@ -12,18 +12,20 @@ class ViewContentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: SizedBox(
-          width: 800,
-          child: RichText(
-            text: TextSpan(
-              children: text
-                  .split(".")
-                  .map((text) => TextSpan(
-                        text: "$text.",
-                        style: GoogleFonts.ptSans(fontSize: 30),
-                      ))
-                  .toList(),
+      body: SingleChildScrollView(
+        child: Center(
+          child: SizedBox(
+            width: 800,
+            child: RichText(
+              text: TextSpan(
+                children: text
+                    .split(".")
+                    .map((text) => TextSpan(
+                          text: "$text.",
+                          style: GoogleFonts.ptSans(fontSize: 30),
+                        ))
+                    .toList(),
+              ),
             ),
           ),
         ),

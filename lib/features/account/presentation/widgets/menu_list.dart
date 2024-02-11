@@ -68,7 +68,7 @@ class MenuList extends StatelessWidget {
               ),
               MenuItem(
                 name: "Tracker",
-                onTapped: () {},
+                onTapped: () => onMenuTapped(3),
               ),
             ],
           ),
