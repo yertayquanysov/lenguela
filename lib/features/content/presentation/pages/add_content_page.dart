@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lenguela/features/reader/presentation/pages/view_content_page.dart';
+import 'package:lenguela/features/content/presentation/pages/view_content_page.dart';
 
 class AddContentPage extends StatelessWidget {
   const AddContentPage({super.key});

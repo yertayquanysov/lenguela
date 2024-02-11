@@ -14,8 +14,8 @@ class MenuList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(height: 10),
-        CupertinoButton(
-          color: Colors.lightGreen,
+        MaterialButton(
+          color: Colors.grey,
           child: const Text("English"),
           onPressed: () {
             showDialog(
@@ -55,7 +55,7 @@ class MenuList extends StatelessWidget {
           child: ListView(
             children: [
               MenuItem(
-                name: "Reader",
+                name: "Content",
                 onTapped: () => onMenuTapped(0),
               ),
               MenuItem(
@@ -63,19 +63,11 @@ class MenuList extends StatelessWidget {
                 onTapped: () => onMenuTapped(1),
               ),
               MenuItem(
-                name: "Listening tracker",
-                onTapped: () {},
+                name: "Flashcard",
+                onTapped: () => onMenuTapped(2),
               ),
               MenuItem(
-                name: "Reading tracker",
-                onTapped: () {},
-              ),
-              MenuItem(
-                name: "You progress",
-                onTapped: () {},
-              ),
-              MenuItem(
-                name: "Premium",
+                name: "Tracker",
                 onTapped: () {},
               ),
             ],
