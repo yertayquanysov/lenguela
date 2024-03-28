@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:lenguela/features/account/presentation/widgets/menu_list.dart';
 import 'package:lenguela/features/content/presentation/pages/add_content_page.dart';
-import 'package:lenguela/features/flashcard/presentation/pages/flashcard_page.dart';
 import 'package:lenguela/features/tracker/presentation/pages/tracker_page.dart';
-import 'package:lenguela/features/vocabulary/presentation/pages/vocabulary_list_page.dart';
+
+import '../../../podcast/presentation/pages/podcast_list_page.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key});
@@ -15,9 +16,8 @@ class AccountPage extends StatefulWidget {
 class _AccountPageState extends State<AccountPage> {
   final _pages = [
     const AddContentPage(),
-    const VocabularyListPage(),
-    const FlashcardPage(),
     const TrackerPage(),
+    const PodcastListPage(),
   ];
 
   int _currentPage = 0;
@@ -27,10 +27,9 @@ class _AccountPageState extends State<AccountPage> {
     return Scaffold(
       body: Row(
         children: [
-          Container(
+          SizedBox(
             width: 300,
             height: double.infinity,
-            color: Colors.orange.withOpacity(0.03),
             child: MenuList(
               onMenuTapped: (int page) {
                 setState(() {
@@ -40,7 +39,7 @@ class _AccountPageState extends State<AccountPage> {
             ),
           ),
           Expanded(
-            child: _pages[_currentPage],
+            child: _pages[2],
           ),
         ],
       ),

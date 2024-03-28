@@ -14,43 +14,6 @@ class MenuList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(height: 10),
-        MaterialButton(
-          color: Colors.grey,
-          child: const Text("English"),
-          onPressed: () {
-            showDialog(
-              context: context,
-              builder: (_) {
-                return AlertDialog(
-                  content: SizedBox(
-                    width: double.minPositive,
-                    child: ListView(
-                      shrinkWrap: true,
-                      children: const [
-                        ListTile(
-                          title: Text("Spanish"),
-                        ),
-                        ListTile(
-                          title: Text("Arabic"),
-                        ),
-                        ListTile(
-                          title: Text("Korean"),
-                        ),
-                        ListTile(
-                          title: Text("English"),
-                        ),
-                        ListTile(
-                          title: Text("Turkey"),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              },
-            );
-          },
-        ),
-        const SizedBox(height: 10),
         Expanded(
           child: ListView(
             children: [
@@ -59,16 +22,12 @@ class MenuList extends StatelessWidget {
                 onTapped: () => onMenuTapped(0),
               ),
               MenuItem(
-                name: "Vocabulary",
+                name: "Tracker",
                 onTapped: () => onMenuTapped(1),
               ),
               MenuItem(
-                name: "Flashcard",
+                name: "Podcast",
                 onTapped: () => onMenuTapped(2),
-              ),
-              MenuItem(
-                name: "Tracker",
-                onTapped: () => onMenuTapped(3),
               ),
             ],
           ),
