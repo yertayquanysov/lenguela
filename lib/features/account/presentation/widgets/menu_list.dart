@@ -29,6 +29,14 @@ class MenuList extends StatelessWidget {
                 name: "Podcast",
                 onTapped: () => onMenuTapped(2),
               ),
+              MenuItem(
+                name: "Youtube Tracker",
+                onTapped: () => {},
+              ),
+              MenuItem(
+                name: "Flashcard",
+                onTapped: () => {},
+              ),
             ],
           ),
         ),

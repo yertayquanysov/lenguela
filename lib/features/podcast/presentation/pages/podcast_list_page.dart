@@ -9,19 +9,19 @@ class PodcastListPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Podcast"),
       ),
-      body: ListView.builder(
+      body: GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 5,
+        ),
         itemBuilder: (_, idx) {
-          return ListTile(
-            leading: Image.network(
-              "https://cdn-icons-png.flaticon.com/512/4628/4628673.png",
-              width: 50,
-            ),
-            title: const Text("Easy Turkish"),
-            onTap: () {},
-            contentPadding: const EdgeInsets.all(10),
-            trailing: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.delete),
+          return Card(
+            elevation: 19,
+            child: Stack(
+              children: [
+                Image.network(
+                    "https://yt3.googleusercontent.com/ytc/AIf8zZRCFmMXbdU0jYNd1OSgNYB8DO-DpEWUMtFhgjU8=s900-c-k-c0x00ffffff-no-rj"),
+                const Text("Easy Turkish"),
+              ],
             ),
           );
         },
